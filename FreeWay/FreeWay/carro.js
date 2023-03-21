@@ -40,9 +40,10 @@ function verificaColisao() {
     colisao = collideRectCircle(xCarros[i], yCarros[i], alturaCarro, larguraCarro, xAtor, yAtor, 30);
     if (colisao) {
       voltaAtorParaPosicaoInicial();
+      tiraPonto();
     }
   }
-  tiraPonto();
   verificaPosicao();
 }
+
 

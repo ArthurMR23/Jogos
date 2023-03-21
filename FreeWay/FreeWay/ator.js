@@ -15,17 +15,18 @@ function mostraAtor() {
 
 function movimentaAtor() {
 
-  if (keyIsDown(UP_ARROW)) { // Mover para cima 
-    yAtor -= 3;
-    
+    if (keyCode === UP_ARROW) {
+      if (yAtor > 5) {
+        yAtor -= 5;
+      }
+    }
+    if (keyCode === DOWN_ARROW) {
+      if (yAtor < 366) {
+        yAtor += 5;
+      }
+    }
   }
-
-  if (keyIsDown(DOWN_ARROW)) { // Mover para baixo
-    yAtor += 3;
-  }
-}
-
-
+  
 function voltaAtorParaPosicaoInicial() { 
   yAtor = 370;
 
